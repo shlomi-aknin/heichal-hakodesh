@@ -1,6 +1,6 @@
 <?php
 function nice_dump($var) {
-	echo '<pre>';
+	echo '<pre class="ltr">';
 	print_r(var_dump($var));
 	echo '</pre>';
 }
@@ -24,5 +24,8 @@ function cleanString(&$string) {
 			}
 			return $escaped;
 		}
+}
+function defDate($date) {
+	return date('d/m/Y', $date);
 }
 ?>

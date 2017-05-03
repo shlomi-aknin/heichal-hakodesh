@@ -1,79 +1,102 @@
 <?php
 	class Category {
-		private $id;
+		const Table = 'categories';
+        private $id;
 		private $name;
 		private $parent;
-	
-    /**
-     * Gets the value of id.
-     *
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+    	
+        public function __construct($id = null) {
+            if($id) {
+                global $db;
+                $db->where('id',$id);
+                $category = $db->get(Self::Table);
+                $category = array_shift($category);
+                if(isset($category['id'])) $this->setId($category['id']);
+                if(isset($category['name'])) $this->setName($category['name']);
+                if(isset($category['parent'])) $this->setParent($category['parent']);
+            }
+        }
+        /**
+         * Gets the value of id.
+         *
+         * @return mixed
+         */
+        public function getId()
+        {
+            return $this->id;
+        }
 
-    /**
-     * Sets the value of id.
-     *
-     * @param mixed $id the id
-     *
-     * @return self
-     */
-    private function setId($id)
-    {
-        $this->id = $id;
+        /**
+         * Sets the value of id.
+         *
+         * @param mixed $id the id
+         *
+         * @return self
+         */
+        private function setId($id)
+        {
+            $this->id = $id;
 
-        return $this;
-    }
+            return $this;
+        }
 
-    /**
-     * Gets the value of name.
-     *
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
+        /**
+         * Gets the value of name.
+         *
+         * @return mixed
+         */
+        public function getName()
+        {
+            return $this->name;
+        }
 
-    /**
-     * Sets the value of name.
-     *
-     * @param mixed $name the name
-     *
-     * @return self
-     */
-    private function setName($name)
-    {
-        $this->name = $name;
+        /**
+         * Sets the value of name.
+         *
+         * @param mixed $name the name
+         *
+         * @return self
+         */
+        private function setName($name)
+        {
+            $this->name = $name;
 
-        return $this;
-    }
+            return $this;
+        }
 
-    /**
-     * Gets the value of parent.
-     *
-     * @return mixed
-     */
-    public function getParent()
-    {
-        return $this->parent;
-    }
+        /**
+         * Gets the value of parent.
+         *
+         * @return mixed
+         */
+        public function getParent()
+        {
+            return $this->parent;
+        }
 
-    /**
-     * Sets the value of parent.
-     *
-     * @param mixed $parent the parent
-     *
-     * @return self
-     */
-    private function setParent($parent)
-    {
-        $this->parent = $parent;
+        /**
+         * Sets the value of parent.
+         *
+         * @param mixed $parent the parent
+         *
+         * @return self
+         */
+        private function setParent($parent)
+        {
+            $this->parent = $parent;
 
-        return $this;
-    }
+            return $this;
+        }
+        public function getArticles() {
+            global $db;
+            $articles = [];
+            $db->where('cat_id',$this->getId());
+            $articles['ids'] = $db->get('articles', null, ['id']);
+            $articles['ids'] = array_shift($articles['ids']);
+            foreach ($articles['ids'] as $article_id)
+                $articles[] = new Article($article_id);
+            unset($articles['ids']);
+            return $articles;
+        }
 }
 ?>
