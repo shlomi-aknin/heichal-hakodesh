@@ -1,0 +1,26 @@
+-- ================================================================
+-- 01.05.2017
+CREATE DATABASE IF NOT EXISTS `heichal-hakodesh`;
+
+CREATE TABLE IF NOT EXISTS `heichal-hakodesh`.`articles` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(256) NOT NULL , `text` TEXT NOT NULL , `long_text` LONGTEXT NOT NULL , `cat_id` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `heichal-hakodesh`.`categories` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(256) NOT NULL , `parent` INT NOT NULL DEFAULT '-1' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `heichal-hakodesh`.`comments` ( `id` INT NOT NULL AUTO_INCREMENT , `article_id` INT NOT NULL , `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `user_id` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `heichal-hakodesh`.`images` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(256) NOT NULL , `article_id` INT NOT NULL , `video` BOOLEAN NOT NULL DEFAULT FALSE , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `heichal-hakodesh`.`newsletter` ( `id` INT NOT NULL AUTO_INCREMENT , `user_id` INT NOT NULL , `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `heichal-hakodesh`.`users` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(256) NOT NULL , `email` VARCHAR(256) NOT NULL , `password` VARCHAR(256) NOT NULL , `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , `last_login` TIMESTAMP NULL DEFAULT NULL, `logged` BOOLEAN NOT NULL DEFAULT FALSE , `blocked` TIMESTAMP NULL DEFAULT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO `categories` (`name`, `parent`) VALUES 
+('שיעורים', '-1'),
+('וידאו', '1'),
+('שמע', '1'),
+('חדשות', '-1'),
+('הודעות', '-1');
+-- ================================================================
+
+
+
