@@ -91,11 +91,11 @@
             global $db;
             $articles = [];
             $db->where('cat_id',$this->getId());
-            $articles['ids'] = $db->get('articles', null, ['id']);
-            $articles['ids'] = array_shift($articles['ids']);
-            foreach ($articles['ids'] as $article_id)
-                $articles[] = new Article($article_id);
-            unset($articles['ids']);
+            $article_rows = $db->get('articles');
+            if ($db->count > 0)
+                foreach ($article_rows as $article)
+                    $articles[] = new Article($article['id']);
+            unset($article_rows);
             return $articles;
         }
 }

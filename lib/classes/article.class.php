@@ -12,14 +12,15 @@
         if($id) {
             global $db;
             $db->where('id',$id);
-            $article = $db->get(Self::Table);
-            $article = array_shift($article);
-            if(isset($article['id'])) $this->setId($article['id']);
-            if(isset($article['name'])) $this->setName($article['name']);
-            if(isset($article['text'])) $this->setText($article['text']);
-            if(isset($article['long_text'])) $this->setLongText($article['long_text']);
-            if(isset($article['cat_id'])) $this->setCatId($article['cat_id']);
-            if(isset($article['date'])) $this->setDate(strtotime($article['date']));
+            $article = $db->getOne(Self::Table);
+            if ($db->count > 0) {
+                if(isset($article['id'])) $this->setId($article['id']);
+                if(isset($article['name'])) $this->setName($article['name']);
+                if(isset($article['text'])) $this->setText($article['text']);
+                if(isset($article['long_text'])) $this->setLongText($article['long_text']);
+                if(isset($article['cat_id'])) $this->setCatId($article['cat_id']);
+                if(isset($article['date'])) $this->setDate(strtotime($article['date']));
+            }
         }
     }
     /**
