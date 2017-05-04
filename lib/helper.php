@@ -26,6 +26,6 @@ function cleanString(&$string) {
 		}
 }
 function defDate($date) {
-	return date('d/m/Y', $date);
+	return date('d/m/Y', strtotime($date));
 }
 ?>

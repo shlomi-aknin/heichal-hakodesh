@@ -25,7 +25,7 @@
                 if(isset($article['cat_id']))
                     $this->setCatId($article['cat_id']);
                 if(isset($article['date']))
-                    $this->setDate(strtotime($article['date']));
+                    $this->setDate($article['date']);
             }
         }
     }

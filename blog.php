@@ -5,7 +5,7 @@
 	<div id="fh5co-blog">
 		<div class="container">
 			<div class="row">
-				<?php echo $articles_html; ?>
+				<?php echo $data['articles_html']; ?>
 			</div>
 		</div>
 	</div>
