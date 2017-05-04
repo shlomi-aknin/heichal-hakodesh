@@ -27,3 +27,8 @@ INSERT INTO `categories` (`name`, `parent`) VALUES
 ALTER TABLE `articles` ADD `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `cat_id`;
 -- ================================================================
 
+-- ================================================================
+-- 04.05.2017
+ALTER TABLE `images` ADD `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `video`;
+ALTER TABLE `images` ADD `is_main` BOOLEAN NOT NULL DEFAULT FALSE AFTER `date`;
+-- ================================================================

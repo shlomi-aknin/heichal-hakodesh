@@ -14,12 +14,18 @@
             $db->where('id',$id);
             $article = $db->getOne(Self::Table);
             if ($db->count > 0) {
-                if(isset($article['id'])) $this->setId($article['id']);
-                if(isset($article['name'])) $this->setName($article['name']);
-                if(isset($article['text'])) $this->setText($article['text']);
-                if(isset($article['long_text'])) $this->setLongText($article['long_text']);
-                if(isset($article['cat_id'])) $this->setCatId($article['cat_id']);
-                if(isset($article['date'])) $this->setDate(strtotime($article['date']));
+                if(isset($article['id']))
+                    $this->setId($article['id']);
+                if(isset($article['name']))
+                    $this->setName($article['name']);
+                if(isset($article['text']))
+                    $this->setText($article['text']);
+                if(isset($article['long_text']))
+                    $this->setLongText($article['long_text']);
+                if(isset($article['cat_id']))
+                    $this->setCatId($article['cat_id']);
+                if(isset($article['date']))
+                    $this->setDate(strtotime($article['date']));
             }
         }
     }
@@ -165,6 +171,29 @@
         $this->date = $date;
 
         return $this;
+    }
+
+    public function getImages() {
+        $images = [];
+        global $db;
+        $db->where('article_id',$this->getId());
+        $image_rows = $db->get('images');
+        if($db->count > 0)
+            foreach ($image_rows as $image_row)
+                $images[] = new Image($image_row['id']);
+        return $images;
+    }
+
+    public function getMainImage() {
+        global $db;
+        $db->where('article_id',$this->getId());
+        $db->where('is_main',1);
+        $image_row = $db->getOne('images');
+        if($db->count > 0) {
+            $image = new Image($image_row['id']);
+            return $image;
+        }
+        return false;
     }
 }
 ?>

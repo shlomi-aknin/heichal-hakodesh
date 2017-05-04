@@ -11,9 +11,12 @@
                 $db->where('id',$id);
                 $category = $db->get(Self::Table);
                 $category = array_shift($category);
-                if(isset($category['id'])) $this->setId($category['id']);
-                if(isset($category['name'])) $this->setName($category['name']);
-                if(isset($category['parent'])) $this->setParent($category['parent']);
+                if(isset($category['id']))
+                    $this->setId($category['id']);
+                if(isset($category['name']))
+                    $this->setName($category['name']);
+                if(isset($category['parent']))
+                    $this->setParent($category['parent']);
             }
         }
         /**
@@ -88,8 +91,8 @@
             return $this;
         }
         public function getArticles() {
-            global $db;
             $articles = [];
+            global $db;
             $db->where('cat_id',$this->getId());
             $article_rows = $db->get('articles');
             if ($db->count > 0)
