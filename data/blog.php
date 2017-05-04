@@ -11,7 +11,7 @@
 				$main_img_src = $data['dir']['uploads'].$main_img_date.'/'.$main_img->getName();
 			}
 			$link = 'single.php?id='.$article->getId();
-			$articles_html .= '<div class="col-lg-4 col-md-4">';
+			$articles_html .= '<div class="col-lg-4 col-md-4 pull-right">';
 			$articles_html .= '<div class="fh5co-blog animate-box">';
 			$articles_html .= '<a href="'.$link.'"><img class="img-responsive" src="'.$main_img_src.'" alt=""></a>';
 			$articles_html .= '<div class="blog-text">';
