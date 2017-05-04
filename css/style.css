@@ -506,7 +506,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-blog,
 #fh5co-contact,
 #fh5co-footer {
-  padding: 7em 0;
+  padding: 12em 0;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -1643,4 +1643,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .D-logo {
   width: 50px;
+}
+.small-fh5co-nav {
+background: rgb(60,67,68); /* Old browsers */
+background: -moz-linear-gradient(45deg, rgba(60,67,68,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, rgba(60,67,68,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, rgba(60,67,68,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c4344', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }

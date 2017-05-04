@@ -1,4 +1,10 @@
 <?php
+	$data['php_file'] = ltrim($_SERVER['PHP_SELF'],'/');
+	$data['nav_class'] = $data['main_header_class'] = '';
+	if($data['php_file'] != 'index.php') {
+		$data['nav_class'] = 'small-fh5co-nav';
+		$data['main_header_class'] = 'hide';
+	}
 	$data['top_nav_html'] = '';
 	$db->where('parent',-1);
 	$data['top_cats'] = $db->get("categories");	

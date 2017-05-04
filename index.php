@@ -35,7 +35,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-push-5 animate-box">
-						<iframe width="750" height="510" src="https://www.youtube.com/embed/uh_DiO1RAbU" frameborder="0" allowfullscreen></iframe>
+						<div class="embed-responsive embed-responsive-16by9">
+						  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uh_DiO1RAbU" allowfullscreen></iframe>
+						</div>
 					</div>
 					<div class="col-md-4 col-md-pull-8 animate-box">
 						<div class="mt">

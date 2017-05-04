@@ -57,7 +57,7 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css?ver=1.0.1">
+	<link rel="stylesheet" href="css/style.css?ver=1.0.2">
 	<!-- Modernizr JS -->
 	
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -72,7 +72,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
+	<nav class="fh5co-nav <?php echo $data['nav_class']; ?>" role="navigation">
 		<div class="top">
 			<div class="container">
 				<div class="row">
@@ -110,7 +110,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(https://i.ytimg.com/vi/kD3am5h4gBM/maxresdefault.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover <?php echo $data['main_header_class'];?>" role="banner" style="background-image:url(https://i.ytimg.com/vi/kD3am5h4gBM/maxresdefault.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">

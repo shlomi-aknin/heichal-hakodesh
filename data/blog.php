@@ -2,6 +2,7 @@
 	if (isset($_GET['cat'])) {
 		$data['articles_html'] = '';
 		$cat = new Category($_GET['cat']);
+		$data['category_name'] = $cat->getName();
 		$data['articles'] = $cat->getArticles();
 		foreach ($data['articles'] as $article) {
 			$main_img = $article->getMainImage();
