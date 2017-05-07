@@ -1,5 +1,5 @@
 <?php
-	ini_set('display_errors', 1);
+	ini_set('display_errors', 0);
 	include 'lib/wrapper.php';
 	include 'data/head.php';
 ?>
@@ -60,7 +60,10 @@
 	<link rel="stylesheet" href="css/style.css?ver=1.0.2">
 	<!-- Modernizr JS -->
 	
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/script.js?ver=1.0.0"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>

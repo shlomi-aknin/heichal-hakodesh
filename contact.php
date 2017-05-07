@@ -1,4 +1,6 @@
-	<?php include 'views/head.php';?>
+	<?php 
+	include 'views/head.php';
+	?>
 	<div id="fh5co-contact">
 		<div class="container">
 			<div class="row">
@@ -17,29 +19,30 @@
 				</div>
 				<div class="col-md-5 col-md-push-1 animate-box">
 					<h3>דברו איתנו</h3>
-					<form action="#">
+					<form id="contact-form" action="" method="post">
 						<div class="row form-group">
 							<div class="col-md-6">
 								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="שם משפחה">
+								<input type="text" id="lname" name="lname" class="form-control" placeholder="שם משפחה">
 							</div>
 							<div class="col-md-6">
 								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="שם פרטי">
+								<input type="text" id="fname" name="fname" class="form-control" placeholder="שם פרטי">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="אימייל">
+								<input type="hidden" name="email" value="honeypot_trap">
+								<input type="text" name="c_email_1" class="form-control" placeholder="אימייל">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control" placeholder="מהות הפנייה">
+								<input type="text" id="subject" name="subject" class="form-control" placeholder="מהות הפנייה">
 							</div>
 						</div>
 
@@ -51,6 +54,7 @@
 						</div>
 						<div class="form-group">
 							<input type="submit" value="שליחה" class="btn btn-primary">
+							<input type="hidden" name="action" value="contact_form">
 						</div>
 
 					</form>		
