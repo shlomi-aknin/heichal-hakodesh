@@ -4,6 +4,7 @@
 	include 'helper.php';
 	include 'classes/PHP-MySQLi-Database-Class-master/MysqliDb.php';
 	include 'classes/PHP-MySQLi-Database-Class-master/dbObject.php';
+	include 'classes/PHPMailer-master/PHPMailerAutoload.php';
 	$class_files = scandir($data['dir']['classes']);
 	foreach ($class_files as $class_file) {
 		if (strpos($class_file, '.class')) include $data['dir']['classes'].$class_file;
