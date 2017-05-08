@@ -57,7 +57,7 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css?ver=1.0.2">
+	<link rel="stylesheet" href="css/style.css?ver=1.0.1">
 	<!-- Modernizr JS -->
 	
 	
@@ -93,13 +93,13 @@
 		<div class="top-menu">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-2 col-xs-1 pull-right">
+					<div class="col-lg-2 col-xs-6 pull-right">
 						<div id="fh5co-logo"><a href="index.php"><?php echo $data['site']['name'];?></a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1 float-left">
 
 						<ul>
-							<li class="pull-right"><a href="index.php">דף הבית</a></li>
+							<li><a href="index.php">דף הבית</a></li>
 							<?php echo $data['top_nav_html'];?>
 							<li><a href="contact.php">צור קשר</a></li>
 							<?php /* ?>

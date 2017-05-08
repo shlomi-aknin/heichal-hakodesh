@@ -1656,3 +1656,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c4344', end
   position: absolute;
   bottom: 5px;
 }
+@media screen and (max-width: 768px) {
+  .fh5co-nav #fh5co-logo {
+    margin: 0 3% 0 0;
+  }
+  #fh5co-offcanvas ul li.offcanvas-has-dropdown > a:after {
+    color: rgba(255, 255, 255, 0);
+  }
+  #fh5co-blog {
+    padding-top: 135px;
+  }
+}
