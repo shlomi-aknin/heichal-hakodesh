@@ -21,7 +21,7 @@
 					<h3>דברו איתנו</h3>
 					<form id="contact-form" action="" method="post">
 						<div class="row form-group">
-							<div class="col-md-6">
+							<div class="col-md-6 xs-margin-btm-15">
 								<!-- <label for="lname">Last Name</label> -->
 								<input type="text" id="lname" name="lname" class="form-control" placeholder="שם משפחה">
 							</div>

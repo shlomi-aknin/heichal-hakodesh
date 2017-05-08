@@ -1663,7 +1663,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c4344', end
   #fh5co-offcanvas ul li.offcanvas-has-dropdown > a:after {
     color: rgba(255, 255, 255, 0);
   }
-  #fh5co-blog {
+  #fh5co-blog, #fh5co-contact {
     padding-top: 135px;
+  }
+  .xs-margin-btm-15 {
+    margin-bottom: 15px;
   }
 }
