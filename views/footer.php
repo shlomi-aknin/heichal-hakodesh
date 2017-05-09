@@ -114,7 +114,6 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<script src="js/script.js"></script>
 	</body>
 </html>
 

@@ -1,13 +1,13 @@
 <?php
     $data = [];
-    $data = parse_ini_file('config/site.ini',true);
+    $data = parse_ini_file($_SERVER['DOCUMENT_ROOT'].'/config/site.ini',true);
 	include 'helper.php';
 	include 'classes/PHP-MySQLi-Database-Class-master/MysqliDb.php';
 	include 'classes/PHP-MySQLi-Database-Class-master/dbObject.php';
 	include 'classes/PHPMailer-master/PHPMailerAutoload.php';
-	$class_files = scandir($data['dir']['classes']);
+	$class_files = scandir($_SERVER['DOCUMENT_ROOT'].$data['dir']['classes']);
 	foreach ($class_files as $class_file) {
-		if (strpos($class_file, '.class')) include $data['dir']['classes'].$class_file;
+		if (strpos($class_file, '.class')) include $_SERVER['DOCUMENT_ROOT'].$data['dir']['classes'].$class_file;
 	}
 	$creds = [
 	    'host' => 'localhost',

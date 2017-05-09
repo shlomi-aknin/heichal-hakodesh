@@ -48,7 +48,8 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-
+	<!-- Font Awesome  -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
@@ -57,13 +58,13 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css?ver=1.0.1">
+	<link rel="stylesheet" href="css/style.css?ver=1.0.3">
 	<!-- Modernizr JS -->
 	
 	
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/script.js?ver=1.0.0"></script>
+	<script src="js/script.js?ver=1.0.3"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
