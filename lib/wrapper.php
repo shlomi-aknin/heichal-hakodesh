@@ -10,10 +10,10 @@
 		if (strpos($class_file, '.class')) include $_SERVER['DOCUMENT_ROOT'].$data['dir']['classes'].$class_file;
 	}
 	$creds = [
-	    'host' => 'localhost',
-	    'username' => 'admin_heichal-hakodesh', 
-	    'password' => 'wYOV78BV6OTbc8LL',
-	    'db'=> 'heichal-hakodesh',
+	    'host' => $_SERVER['HOST'],
+	    'username' => $_SERVER['DB_USERNAME'],
+	    'password' => $_SERVER['DB_PASSWORD'],
+	    'db'=> $_SERVER['DB_NAME'],
     ];
     $db = new MysqliDb ($creds);    
     if (isset($_GET)) cleanString($_GET);    
