@@ -8,8 +8,13 @@
 			$main_img = $article->getMainImage();
 			if(!$main_img) $main_img_src = 'images/project-1.jpg';
 			else {
-				$main_img_date = date('Y-m-d',strtotime($main_img->getDate()));
-				$main_img_src = $data['dir']['uploads'].$main_img_date.'/'.$main_img->getName();
+				$main_img_name = $main_img->getName();
+				if(strpos($main_img_name,'http://') !== FALSE)
+					$main_img_src = $main_img_name;
+				else {
+					$main_img_date = date('Y-m-d',strtotime($main_img->getDate()));
+					$main_img_src = $data['dir']['uploads'].$main_img_date.'/'.$main_img_name;
+				}
 			}
 			$link = 'single.php?cat='.$article->getCatId().'&id='.$article->getId();
 			$data['short_text'] = $article->getText();
