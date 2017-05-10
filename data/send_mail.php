@@ -14,7 +14,7 @@ $mail->Port = 25;                                    // TCP port to connect to
 $mail->setFrom($data['contact']['email'], $data['contact']['user']);
 $mail->addAddress($data['site']['email'], 'Heichal hakodesh admin');     // Add a recipient
 // $mail->addAddress('ellen@example.com');               // Name is optional
-$mail->addReplyTo($data['site']['email'], 'Heichal hakodesh admin');
+$mail->addReplyTo($data['contact']['email'], $data['contact']['user']);
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = $data['contact']['subject'];
