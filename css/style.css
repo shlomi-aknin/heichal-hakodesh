@@ -1055,6 +1055,8 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
   -moz-box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
   box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.18);
+}
+.fh5co-blog .blog-text.add-min-height {
   min-height: 320px;
 }
 .fh5co-blog .blog-text span {

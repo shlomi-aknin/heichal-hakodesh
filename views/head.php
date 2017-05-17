@@ -81,8 +81,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-right">
-						<p class="num"><?php echo $data['site']['phone'];?></p>
-						<ul class="fh5co-social">
+						<p class="num"><a href="tel:<?php echo $data['site']['phone'];?>"><?php echo $data['site']['phone'];?></a></p>
+						<ul class="fh5co-social hide">
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
 							<li><a href="#"><i class="icon-github"></i></a></li>
@@ -123,7 +123,6 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>אני איש פלא ונשמתי היא פלא גדול <br> אני נהר המטהר מכל הכתמים</h1>
 							<h2>כ"ק מוהרא"ש הצדיק מיבנאל</h2>
-							<p><a class="btn btn-primary btn-lg btn-learn" href="#">Take A Course</a> <a class="btn btn-primary btn-lg popup-vimeo btn-video" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play"></i> Watch Video</a></p>
 						</div>
 					</div>
 				</div>

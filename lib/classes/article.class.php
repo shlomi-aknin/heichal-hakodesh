@@ -1,6 +1,7 @@
 <?php
 	class Article {
-		const Table = 'articles';
+        const Table = 'articles';
+		const QnA_cat_id = 7;
         private $id;
 		private $name;
 		private $text;
@@ -194,6 +195,18 @@
             return $image;
         }
         return false;
+    }
+
+    public static function getRandoms($cat_id = null, $num = 3) {
+        $ret = [];
+        global $db;
+        if($cat_id)
+            $db->where('cat_id',$cat_id);
+        $db->orderBy("RAND()");
+        $articles = $db->get(Self::Table, $num);
+        foreach ($articles as $article)
+            $ret[] = new Self($article['id']);
+        return $ret;
     }
 }
 ?>

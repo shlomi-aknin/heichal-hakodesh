@@ -1,4 +1,7 @@
-	<?php include 'views/head.php';?>
+	<?php 
+		include 'views/head.php';
+		include 'data/index.php';
+	?>
 	<div id="fh5co-counter" class="fh5co-counters">
 		<div class="container">
 			<div class="row">
@@ -48,7 +51,7 @@
 								<li><i class="icon-check2"></i>לחן, עיבוד ומילים: בריו חקשור</li>
 								<li><i class="icon-check2"></i>פסנתרים: דוד אכילביץ</li>
 							</ul>
-							<p><a class="btn btn-primary btn-lg popup-vimeo btn-video play-video" href="#"><i class="icon-play"></i> Watch Video</a></p>
+							<p><a class="btn btn-primary btn-lg popup-vimeo btn-video play-video" href="#">הפעל סרטון</a></p>
 						</div>
 					</div>
 				</div>
@@ -62,21 +65,8 @@
 						<img class="img-responsive" src="https://i.ytimg.com/vi/GHz8ig5Iahc/maxresdefault.jpg" alt="work">
 					</div>
 					<div class="col-md-4 animate-box">
-						<div class="mt">
-							<div>
-								<h4><i class="icon-user"></i>האם כשמרגישים עצבות בימי ספירת העומר ובימי בין המצרים מותר לשמוע ניגונים?</h4>
-								<p>כי על ידי עצבות ומרה שחורה ודכאון הוא יכול לאבד את עולמו ברגע אחד</p>
-							</div>
-							<div>
-								<h4><i class="icon-user"></i>האם כשמרגישים עצבות בימי ספירת העומר ובימי בין המצרים מותר לשמוע ניגונים?</h4>
-								<p>כי על ידי עצבות ומרה שחורה ודכאון הוא יכול לאבד את עולמו ברגע אחד</p>
-							</div>
-							<div>
-								<h4><i class="icon-user"></i>האם כשמרגישים עצבות בימי ספירת העומר ובימי בין המצרים מותר לשמוע ניגונים?</h4>
-								<p>כי על ידי עצבות ומרה שחורה ודכאון הוא יכול לאבד את עולמו ברגע אחד</p>
-							</div>
-						</div>
-					</div>
+						<h3>שאלות ותשובות נבחרות</h3>
+						<?php echo $data['rand_questions_html']; ?>
 				</div>
 			</div>
 		</div>
@@ -154,49 +144,6 @@
 		</div>
 	</div>
 
-	<div id="fh5co-steps">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Start A Course</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-
-			<div class="row bs-wizard animate-box" style="border-bottom:0;">
-                
-				<div class="col-xs-3 bs-wizard-step complete">
-					<div class="text-center bs-wizard-stepnum"><h4>Step 1</h4></div>
-					<div class="progress"><div class="progress-bar"></div></div>
-					<a href="#" class="bs-wizard-dot"></a>
-					<div class="bs-wizard-info text-center"><p>Create A Free Course</p></div>
-				</div>
-
-				<div class="col-xs-3 bs-wizard-step active"><!-- complete -->
-					<div class="text-center bs-wizard-stepnum"><h4>Step 2</h4></div>
-					<div class="progress"><div class="progress-bar"></div></div>
-					<a href="#" class="bs-wizard-dot"></a>
-					<div class="bs-wizard-info text-center"><p>Upload Content</p></div>
-				</div>
-
-				<div class="col-xs-3 bs-wizard-step disabled"><!-- complete -->
-					<div class="text-center bs-wizard-stepnum"><h4>Step 3</h4></div>
-					<div class="progress"><div class="progress-bar"></div></div>
-					<a href="#" class="bs-wizard-dot"></a>
-					<div class="bs-wizard-info text-center"><p>Make Your Course Beautiful</p></div>
-				</div>
-
-				<div class="col-xs-3 bs-wizard-step disabled"><!-- active -->
-					<div class="text-center bs-wizard-stepnum"><h4>Step 4</h4></div>
-					<div class="progress"><div class="progress-bar"></div></div>
-					<a href="#" class="bs-wizard-dot"></a>
-					<div class="bs-wizard-info text-center"><p>Start Making Money</p></div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
 	<div id="fh5co-testimonial" class="fh5co-bg-section">
 		<div class="container">
 			<div class="row animate-box">
@@ -252,8 +199,8 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Recent Post</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>אייטמים נבחרים</h2>
+					<p>כמה אייטמים שנבחרו אקראית</p>
 				</div>
 			</div>
 			<div class="row">
