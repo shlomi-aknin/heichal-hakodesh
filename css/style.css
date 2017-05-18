@@ -1215,7 +1215,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-offcanvas {
   position: absolute;
   z-index: 1901;
-  width: 270px;
+  width: 65%;
   background: black;
   top: 0;
   right: 0;
@@ -1232,6 +1232,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   #fh5co-offcanvas {
@@ -1427,7 +1428,7 @@ h1, h2, h3, h4, h5, h6, figure {
   right: 0px;
   top: 65px;
   z-index: 21;
-  padding: 6px 0 0 0;
+  padding: 0 3%;
   display: block;
   margin: 0 auto;
   display: none;
@@ -1662,8 +1663,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c4344', end
   border: 2px solid red;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-nav #fh5co-logo {
-    margin: 0 3% 0 0;
+  #logo-box {
+    text-align: center;
   }
   #fh5co-offcanvas ul li.offcanvas-has-dropdown > a:after {
     color: rgba(255, 255, 255, 0);

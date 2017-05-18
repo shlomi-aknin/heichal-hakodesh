@@ -94,7 +94,7 @@
 		<div class="top-menu">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-2 col-xs-6 pull-right">
+					<div id="logo-box" class="col-lg-2 col-xs-12 pull-right">
 						<div id="fh5co-logo"><a href="index.php"><?php echo $data['site']['name'];?></a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1 float-left">
