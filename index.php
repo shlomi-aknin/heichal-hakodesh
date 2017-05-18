@@ -51,7 +51,7 @@
 								<li><i class="icon-check2"></i>לחן, עיבוד ומילים: בריו חקשור</li>
 								<li><i class="icon-check2"></i>פסנתרים: דוד אכילביץ</li>
 							</ul>
-							<p><a class="btn btn-primary btn-lg popup-vimeo btn-video play-video" href="#">הפעל סרטון</a></p>
+							<p><a class="btn btn-primary btn-lg popup-youtube btn-video play-video" href="https://www.youtube.com/watch?v=uh_DiO1RAbU">הפעל סרטון</a></p>
 						</div>
 					</div>
 				</div>
