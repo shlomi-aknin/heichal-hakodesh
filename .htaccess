@@ -1,5 +1,5 @@
 php_value date.timezone 'Asia/Jerusalem'
-SetEnv HOST localhost
-SetEnv DB_USERNAME admin_heichal-hakodesh
-SetEnv DB_PASSWORD wYOV78BV6OTbc8LL
-SetEnv DB_NAME heichal-hakodesh
+SetEnv HOST 'localhost'
+SetEnv DB_USERNAME 'admin_heichal-hakodesh'
+SetEnv DB_PASSWORD 'wYOV78BV6OTbc8LL'
+SetEnv DB_NAME 'heichal-hakodesh'
